@@ -1,0 +1,250 @@
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css");
+@import url("https://fonts.googleapis.com/css?family=Baloo+Bhai");
+/*--Global css
+--*/
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  box-sizing: border-box;
+  padding: 0px 0px;
+  background-color: brown;
+  overflow-x:hidden;
+}
+ul {
+  list-style: none;
+  margin: 0;
+}
+.coffe-types,
+.coffe-types-inner-box,
+.NavLink_ul {
+  display: flex;
+}
+
+/*--styling CoffeType component
+--*/
+
+.coffe-types {
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: "Baloo Bhai", cursive;
+}
+.coffe-types-inner-box {
+  justify-content: center;
+}
+
+.btn-default {
+  width: 180px;
+  margin: 10px 10px 10px 0px;
+  background-color: #916656de;
+  position: relative;
+  transition: all 0.3s linear;
+}
+.btn-default:nth-child(odd):hover::before {
+  left: -20px;
+  border-color: transparent transparent transparent black;
+}
+.btn-default:nth-child(even):hover::before {
+  right: -20px;
+  border-color: transparent black transparent transparent;
+}
+.btn-default:hover::before {
+  content: "";
+  display: block;
+  border: 8px solid black;
+  width: 10px;
+  position: absolute;
+}
+
+.CoffeType-span {
+  right: 0;
+  position: absolute;
+  top: 0;
+  background-color: #9e9e9e;
+  padding: 6px;
+}
+
+/*-- coffedescription component css 
+--*/
+.coffe-description {
+  perspective: 1400px;
+  margin: 240px 0px 30px 0px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+}
+.coffe-description-img-p {
+  transform: rotateX(0deg);
+  transition: transform 1s ease-in-out;
+  box-shadow: 0px 2px 8px black;
+}
+.coffe-description-img {
+  width: 100%;
+  height: auto;
+  border: 2px double #9e9e9e;
+  border-bottom: none;
+  transition: all 2s linear;
+}
+
+.info {
+  position: relative;
+}
+
+button.btn-success {
+  transition: background 0.1s linear;
+  position: absolute;
+}
+.want-it {
+  left: 2px;
+  top: 20px;
+  font-weight: bold;
+  background-color: #f44336;
+  border: none;
+}
+.otherOne {
+  left: 2px;
+  bottom: 20px;
+  font-weight: bold;
+  background-color: #f44336;
+  border: none;
+}
+article {
+  padding: 20px;
+  border: 1px solid #9e9e9e;
+  font-weight: bold;
+  background-color: #dddedded;
+}
+
+.coffe-description:hover > .coffe-description-img-p {
+  transform: rotateX(360deg);
+}
+.info {
+  overflow: hidden;
+}
+.coffe-description-img:hover {
+  transform: scale(1.2);
+}
+/*-- cofferegister component css
+--*/
+.selected_coffe {
+  font-family: "Baloo Bhai", cursive;
+  margin-bottom: 20px;
+}
+
+option {
+  background-color: rgba(236, 131, 131, 0.205);
+}
+table,
+table th {
+  text-align: center;
+  background-color: #ffffff40;
+  font-family: "Baloo Bhai", cursive;
+  vertical-align: center;
+}
+tr > td:first-child {
+  color: #d3cae6;
+}
+.table-bordered {
+  width: 400px;
+}
+.table-bordered tr th:first-child,
+.table-bordered tr td:first-child {
+  text-align: left;
+  text-indent: 20px;
+}
+.Coffe-register-back {
+  font-family: "Baloo Bhai", cursive;
+}
+.Coffe-register-back button {
+  background-color: rgb(230, 107, 107);
+  border: 1px solid black;
+  border-radius: 2px;
+  box-shadow: 2px 2px 2px black;
+}
+.Coffe-register-back button a {
+  color: rgba(255, 228, 228, 0.767);
+  text-decoration: none;
+  transition: color 0.4s linear;
+}
+.Coffe-register-back button a:hover {
+  color: #0d0e0d;
+}
+.coffe-register-span {
+  margin-right: 10px;
+  color: rgb(182, 177, 177);
+}
+@keyframes comeout {
+  from {
+    margin-left: 90%;
+  }
+  to {
+    margin-left: 10px;
+  }
+}
+.stay button {
+  border-radius: 50%;
+  padding: 6px 4px;
+  margin-bottom: 4px;
+  animation-name: comeout;
+  animation-duration: 2s;
+}
+.stay button:hover {
+  color: white;
+}
+/*--NavLink component --*/
+.navbar {
+  background-attachment: fixed;
+}
+.NavLink_ul {
+  align-items: center;
+  height: 45px;
+  font-family: "Baloo Bhai", cursive;
+}
+.NavLink_ul li {
+  margin-right: 20px;
+}
+.NavLink_ul li a {
+  color: #ff8d64;
+}
+
+/*--aside component --*/
+aside {
+  position: absolute;
+  width: 228px;
+  background-color: #ffffffb5;
+  border: 1px solid #795548;
+  border-radius: 5px;
+  top: 49px;
+  right: 0;
+  z-index: 10;
+  box-shadow: 2px 2px 2px #000000ab;
+  padding: 10px;
+  text-align: center;
+  font-family: "Baloo Bhai", cursive;
+}
+aside p {
+  background-color: black;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 3px;
+  color: #ff8d64;
+}
+
+.sidebar_ul {
+  padding: 0;
+  text-indent: 12px;
+}
+aside{
+  transition:transform .7s ease-in-out;
+}
+.hideBar{
+  transform:translateX(100%);
+}
+.showBar{
+  transform:translateX(0%);
+}
